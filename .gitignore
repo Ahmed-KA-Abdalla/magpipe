@@ -1,0 +1,16 @@
+# Cached downloads. INTERMAGNET data are not redistributed here; only the
+# small attributed extracts under tests/data/ are committed.
+data/
+!tests/data/
+
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+.vscode/
+.idea/

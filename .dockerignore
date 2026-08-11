@@ -1,0 +1,14 @@
+.git/
+.venv/
+venv/
+data/
+docs/figures/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+.vscode/
+.idea/

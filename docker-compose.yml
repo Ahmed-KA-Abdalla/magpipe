@@ -1,0 +1,32 @@
+# Two services over one image.
+#
+#   test  runs the suite; this is what CI builds and runs
+#   cli   runs any pipeline command, with the download cache and the
+#         figure directory bind-mounted so output survives the container
+#
+# Usage:
+#   docker compose run --rm test
+#   docker compose run --rm cli scripts/fetch_data.py --obs ESK \
+#       --start 2024-05-10 --orientation XYZS --check
+#   docker compose run --rm cli scripts/plot_day.py --obs ESK \
+#       --start 2024-05-10
+
+services:
+  test:
+    build:
+      context: .
+      target: runtime
+    image: magpipe:latest
+    command: ["-m", "pytest", "-q"]
+
+  cli:
+    build:
+      context: .
+      target: runtime
+    image: magpipe:latest
+    volumes:
+      # Downloads and figures are written on the host, not lost with
+      # the container. INTERMAGNET data stay out of the image.
+      - ./data:/app/data
+      - ./docs/figures:/app/docs/figures
+    command: ["scripts/fetch_data.py", "--help"]
