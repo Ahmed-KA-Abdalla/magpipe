@@ -109,6 +109,13 @@ redistribution or publication.
 > INTERMAGNET for promoting high standards of magnetic observatory
 > practice (https://intermagnet.org).
 
+## Documentation
+
+- [Design note](docs/design-note.md) — architecture, data source, and the
+  reasoning behind the validation thresholds
+- [Test report](docs/test-report.md) — strategy, coverage, results, and
+  defects found
+
 ## Layout
 
     magpipe/fetch.py             GIN web service client, caching, retry

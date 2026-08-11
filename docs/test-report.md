@@ -1,6 +1,6 @@
 # magpipe — test report
 
-Version 0.1, August 2026. Covers magpipe 0.1 at commit `a32f4f7`.
+Version 0.1, August 2026. Covers magpipe 0.1 at commit `67e133f`.
 
 ## 1. Scope
 
