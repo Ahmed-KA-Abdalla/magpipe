@@ -3,6 +3,26 @@
 Ingest, validate, store and plot ground magnetometer observatory data
 distributed in the IAGA-2002 exchange format.
 
+[![CI](https://github.com/Ahmed-KA-Abdalla/magpipe/actions/workflows/ci.yml/badge.svg)](https://github.com/Ahmed-KA-Abdalla/magpipe/actions/workflows/ci.yml)
+
+## Example output
+
+Eskdalemuir, 10 May 2024 — the Gannon storm. Definitive one-minute data,
+baselines removed, gaps shaded.
+
+![ESK time series](docs/figures/esk_2024-05-10_series.png)
+
+Scalar minus vector total field over the same interval. F comes from an
+independent scalar instrument, so the residual is a check on both
+instruments rather than an identity.
+
+![ESK residual](docs/figures/esk_2024-05-10_residual.png)
+
+Eskdalemuir and Hartland overlaid, showing the disturbance is regional
+rather than local to one observatory.
+
+![Comparison](docs/figures/compare_X_2024-05-10.png)
+
 ## What it does
 
     fetch    retrieve observatory data from the INTERMAGNET GIN web service,
